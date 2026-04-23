@@ -1,25 +1,24 @@
 :root {
-  --Inter: 'Inter-Variable';
-  --PressStart2P: 'PressStart2P-Regular';
+  --Inter: "Inter-Variable";
+  --PressStart2P: "PressStart2P-Regular";
   --regular: 410;
   --black: 715;
-  --gradient-background: repeating-linear-gradient(90deg,
+  --gradient-background:
+    repeating-linear-gradient(
+      90deg,
       #d3d3d3 0px,
       #d3d3d3 2px,
       transparent 2px,
       transparent 4px
     ),
-    repeating-linear-gradient(0deg,
+    repeating-linear-gradient(
+      0deg,
       #d3d3d3 0px,
       #d3d3d3 2px,
       transparent 2px,
       transparent 4px
     ),
-    linear-gradient(
-      to bottom,
-      #e7e7e7 0.01%,
-      #1a1a1a 100%
-    );
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
   --container-width: clamp(375px, 100vw, 700px);
   --container-image-width: clamp(371px, calc(100vw - 4px), 696px);
   --black-text: #000000;
@@ -27,46 +26,9 @@
   --container-width-mob: clamp(min-content, 100vw, 375px);
   --container-image-width-mob: clamp(min-content, calc(100vw - 4px), 371px);
   --contour: #000000;
-  --animation-fill-color: #FF0000;
-  --core-color: #FFFFFF;
-  --main-body: #FF0000;
+  --animation-fill-color: #ff0000;
+  --core-color: #ffffff;
+  --main-body: #ff0000;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
