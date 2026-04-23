@@ -13,4 +13,405 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--Inter), sans-serif;
+  font-variation-settings: 'wght' var(--regular);
+  background-image: var(--gradient-background);
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+.container {
+  background-color: #FFFFFF;
+  outline: none;
+  border: 2px solid #000000;
+  margin: auto;
+  max-inline-size: var(--container-width);
+}
+.header__container {
+  inline-size: var(--container-width);
+  min-block-size: 327px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header__tittle {
+  color: var(--black-text);
+  font-family: var(--PressStart2P);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 65px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.header__subtittle {
+  color: var(--black-text);
+  font-family: var(--PressStart2P);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 23px;
+  line-height: 3;
+  text-transform: uppercase;
+}
+.cards__block {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: auto;
+}
+.cards__tittle {
+  color: var(--black-text);
+  font-variation-settings: 'wght' var(--black);
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1;
+  padding: 4px 10px;
+}
+.cards__text__container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+}
+.car {
+  min-inline-size: var(--container-image-width);
+}
+.footer {
+  margin: auto;
+}
+.footer__button {
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: transparent;
+  margin: 52px auto 100px auto;
+  height: auto;
+  background-color: #fff;
+  padding: 20px;
+  gap: 8px;
+  transition: box-shadow 0.3s ease; 
+  position: relative;
+  overflow: hidden;
+}
+.footer__button:focus {
+  outline: none;
+  box-shadow: 2px 2px #000;
+}
+.footer__button::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 0%;
+  background-color: black;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer__button:hover::before {
+  transform: translateX(0);
+  width: 100%;
+  height: 100%;
+}
+
+.diskette__text.button__text,
+.svg__diskette__open {
+  mix-blend-mode: difference;
+  color: white;
+  stroke: #fff;
+  fill: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.diskette__text {
+  color: var(--black-text);
+  font-family: var(--PressStart2P);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 0.9;
+}
+.button__like {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  margin-bottom: 25px;
+  padding-right: 27px;
+}
+
+.like {
+  border: 2px solid #000;
+  margin-left: 12px;
+  background-color: transparent;
+  color: var(--black-text);
+  font-family: var(--PressStart2P);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 0.9;
+  padding: 5px 30px;
+  transition: box-shadow 0.3s ease; 
+  position: relative;
+  overflow: hidden;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.like::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 100%;
+  background-color: black;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.like:hover::before {
+  transform: translateX(0);
+  width: 100%;
+}
+.like span {
+  mix-blend-mode: difference;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.like__container {
+  background-color: #fff;
+  border: 2px solid transparent;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  padding: 0;
+  height: 40px;
+}
+.like:focus {
+  outline: none;
+  box-shadow: 2px 2px #000;
+}
+.like__container:focus {
+  outline: none;
+  border: 2px solid #000;
+}
+.like__container:focus-visible {
+  border-color: #000;
+}
+.svg__diskette {
+  flex-shrink: 0;
+}
+.container__for__image__and__html {
+  position: relative;
+}
+.label__html {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  color: var(--black-text);
+  font-family: var(--PressStart2P);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 0.9;
+  text-transform: uppercase;
+  mix-blend-mode: hard-light;
+  text-shadow: 1px 1px var(--white-outline), -1px -1px var(--white-outline);
+  opacity: 0.5;
+}
+@supports((text-stroke: 1px var(--white-outline)) or (-webkit-text-stroke: 1px var(--white-outline))) {
+  .label__html {
+    -webkit-text-stroke: 1px var(--white-outline);
+    text-stroke: 1px var(--white-outline);
+    text-shadow: none;
+  }
+} 
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+.button__ok {
+  display: inline-block;
+  border: 2px solid #000;
+  background-color: transparent;
+  padding: 12.5px calc(50% - 15px);
+  color: var(--black-text);
+  font-family: var(--PressStart2P);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+.button__image__and__label {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.label__button {
+  color: var(--black-text);
+  font-family: var(--PressStart2P);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.svg__diskette__close {
+  inline-size: 39px;
+  block-size: 39px;
+}
+.svg__diskette__open {
+  inline-size: 21px;
+  block-size: 21px;
+}
+.dialog {
+  max-width: 353px;
+  border: 2px solid #000;
+  padding: 30px;
+}
+@media (width <= 375px) {
+  .header__tittle {
+  font-size: 49px;
+}
+.header__subtittle {
+  font-size: 14px;
+}
+.footer__button {
+  flex-direction: column;
+}
+.svg__diskette__open {
+  inline-size: 28px;
+  block-size: 28px;
+}
+.container {
+  max-inline-size: var(--container-width-mob);
+}
+.car {
+  min-inline-size: var(--container-image-width-mob);
+}
+}
+
+.car__sepia {
+    filter: sepia(65%);
+}
+.car__saturate {
+    filter: saturate(500%);
+} 
+.car__contrast {
+  filter: contrast(125%) hue-rotate(-320deg);
+}
+.car__invert {
+    filter: invert(0.7);
+} 
+.car__brightness {
+    filter: brightness(90%) sepia(90%);
+} 
+.car__blur {
+    filter: blur(0.3rem);
+} 
+.car__grayscale {
+    filter: grayscale(0.2) invert(0.9) sepia(80%) drop-shadow(5px 15px 3px rgba(0, 0, 2, 0.1));
+} 
+
+.button__ok {
+  transition: box-shadow 0.3s ease; 
+  position: relative;
+  overflow: hidden;
+}
+.button__ok::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 100%;
+  background-color: black;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.button__ok:hover::before {
+  transform: translateX(0);
+  width: 100%;
+}
+.button__ok span {
+  mix-blend-mode: difference;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+.button__ok:focus {
+  outline: none;
+  box-shadow: 2px 2px #000;
+}
+.like-icon {
+  height: 36px;
+  width: 39px;
+  transform-origin: center;
+}
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+.contour {
+  fill: var(--contour);
+  transition: fill 0.1s linear;
+}
+.sparks {
+  fill: var(--animation-fill-color);
+  opacity: 0;
+  animation: sparks 0.3s ease-in 0.3s forwards;
+}
+.like-icon:hover .core {
+  fill: var(--core-color);
+  transition: fill 0.3s linear 0s;
+  cursor: pointer;
+}
+.like-icon:hover .main-body {
+  fill: var(--main-body);
+  transition: fill 0.3s linear 0.05s;
+  cursor: pointer;
+} 
+.like-icon:active .core {
+  fill: var(--main-body);
+  transition: fill 0.3s linear 0s;
+}
+.like-icon:active .main-body {
+  fill: var(--main-body);
+  transition: fill 0.3s linear 0.05s;
+} 
+.like-icon.is-liked .core {
+  fill: var(--main-body);
+  transition: fill 0.3s linear 0s;
+}
+.like-icon.is-liked .main-body {
+  fill: var(--main-body);
+  transition: fill 0.3s linear 0.05s;
+}
+.like-icon.is-liked .contour {
+  fill: var(--main-body);
+  transition: fill 0.3s linear 0.06s;
+}
+.heart {
+  animation: heart 0.3s ease-in 0.1s forwards;
 }
