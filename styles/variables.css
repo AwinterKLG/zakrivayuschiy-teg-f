@@ -1,6 +1,6 @@
 :root {
   --Inter: "Inter-Variable";
-  --PressStart2P: "PressStart2P-Regular";
+  --PressStart2P: "PressStart2P";
   --regular: 410;
   --black: 715;
   --gradient-background:
@@ -29,6 +29,12 @@
   --animation-fill-color: #ff0000;
   --core-color: #ffffff;
   --main-body: #ff0000;
+  --font-size-header-tittle: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --font-size-header-subtittle: clamp(
+    0.875rem,
+    0.6769rem + 0.8451vw,
+    1.4375rem
+  );
 }
 
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
